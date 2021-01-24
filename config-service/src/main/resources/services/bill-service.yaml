@@ -1,16 +1,16 @@
 spring:
   jpa:
-    database: POSTGRESQL
+    database: MYSQL
     properties.hibernate.temp.use_jdbc_metadata_defaults: false
     hibernate:
       ddl-auto: create
     properties:
   datasource:
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/bill_service_database
-    username: postgres
-    password: root
-    driver-class-name: org.postgresql.Driver
+    platform: mariadb
+    url: jdbc:mariadb://127.0.0.1:3306/bill_service_database
+    username: root
+    password:
+    driver-class-name: org.mariadb.jdbc.Driver
 
 server:
   servlet:
