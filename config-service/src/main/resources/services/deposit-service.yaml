@@ -1,22 +1,23 @@
 spring:
   jpa:
-    database: POSTGRESQL
+    database: MYSQL
     properties.hibernate.temp.use_jdbc_metadata_defaults: false
     hibernate:
       ddl-auto: create
     properties:
   datasource:
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/deposit_service_database
-    username: postgres
-    password: root
-    driver-class-name: org.postgresql.Driver
+    platform: mariadb
+    url: jdbc:mariadb://127.0.0.1:3306/deposit_service_database
+    username: root
+    password:
+    driver-class-name: org.mariadb.jdbc.Driver
 
 rabbitmq:
   port: 5672
-  host: rabbitmq
+  host: localhost
   username: guest
   password: guest
   listener:
     direct:
       default-requeue-rejected: true
+
